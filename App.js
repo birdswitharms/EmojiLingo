@@ -1,28 +1,18 @@
 import React, {Fragment} from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text} from 'react-native';
+import {theme} from './theme';
 
 const App = () => {
   return (
     <Fragment>
-      <View style={styles.engine}>
-        <Text style={styles.logo}>Emoji Lingo</Text>
+      <View style={theme.main}>
+        <Text style={theme.logoText}>Emoji Lingo</Text>
+        <Text style={theme.subHeaderText}>
+          A modern heiroglypics guessing game
+        </Text>
       </View>
     </Fragment>
   );
 };
-
-const styles = StyleSheet.create({
-  engine: {
-    backgroundColor: '#00906c',
-    height: '100%',
-  },
-  logo: {
-    fontSize: 24,
-    position: 'absolute',
-    right: '50%',
-    top: '50%',
-    textAlign: 'center',
-  },
-});
 
 export default App;
